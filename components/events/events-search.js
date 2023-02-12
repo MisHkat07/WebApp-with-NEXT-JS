@@ -4,19 +4,18 @@ import classes from "./events-search.module.css";
 import { useRef } from "react";
 
 const EventSearch = (props) => {
+  const yearInputRef = useRef();
+  const monthInputRef = useRef();
 
-    const yearInputRef = useRef()
-    const monthInputRef = useRef()
+  function submitHandler(event) {
+    event.preventDefault();
 
-    function submitHandler(event) {
-        event.preventDefault();
-        
-        const selectedYear = yearInputRef.current.value;
-        const selectedMonth  = monthInputRef.current.value;
+    const selectedYear = yearInputRef.current.value;
+    const selectedMonth = monthInputRef.current.value;
 
-        props.onSearch(selectedYear, selectedMonth)
-    }
-    
+    props.onSearch(selectedYear, selectedMonth);
+  }
+
   return (
     <form className={classes.form} onSubmit={submitHandler}>
       <div className={classes.controls}>
