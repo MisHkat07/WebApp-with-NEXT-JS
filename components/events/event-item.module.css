@@ -12,7 +12,7 @@
 .item img {
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 10rem;
 }
 
