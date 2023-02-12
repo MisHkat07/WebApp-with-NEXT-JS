@@ -1,8 +1,7 @@
-import Link from 'next/link'
-import React from 'react'
-import EventList from '../components/events/Events-List';
-import { getFeaturedEvents } from './../database/data';
-
+import Link from "next/link";
+import React from "react";
+import EventList from "../components/events/Events-List";
+import { getFeaturedEvents } from "./../database/data";
 
 export default function Home() {
   const featuredEvents = getFeaturedEvents();
@@ -10,5 +9,5 @@ export default function Home() {
     <div>
       <EventList items={featuredEvents} />
     </div>
-  )
+  );
 }
