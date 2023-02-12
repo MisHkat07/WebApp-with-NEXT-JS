@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { getFilteredEvents } from "./../../database/data";
 import EventList from "../../components/events/events-list";
 import ResultsTitle from "../../components/events/results-title";
-import ErrorAlert from './../../components/ui/error-alert';
+import ErrorAlert from "./../../components/ui/error-alert";
 
 const FilteredEvents = () => {
   const router = useRouter();
@@ -25,7 +25,7 @@ const FilteredEvents = () => {
     filteredMonth < 1 ||
     filteredMonth > 12
   ) {
-    return <ErrorAlert >Invalid Filtered! Adjust your values!</ErrorAlert>;
+    return <ErrorAlert>Invalid Filtered! Adjust your values!</ErrorAlert>;
   }
 
   const filteredData = getFilteredEvents({
@@ -38,7 +38,7 @@ const FilteredEvents = () => {
     return <ErrorAlert>No Event Found!</ErrorAlert>;
   }
 
-  const date = new Date(filteredYear, filteredMonth - 1)
+  const date = new Date(filteredYear, filteredMonth - 1);
 
   return (
     <>
